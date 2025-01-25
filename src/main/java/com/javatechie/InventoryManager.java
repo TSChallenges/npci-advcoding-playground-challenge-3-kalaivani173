@@ -125,6 +125,7 @@ public class InventoryManager {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_NAME))) {
             for (Map.Entry<String, Integer> entry : inventory.entrySet()) {
                 bw.write(entry.getKey() + "," + entry.getValue());
+
                 bw.newLine();
             }
             System.out.println("Inventory saved.");
